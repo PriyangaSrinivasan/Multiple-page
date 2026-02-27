@@ -62,15 +62,22 @@ button{
     top:0;
 
 }
-.logo{
-    display: flex;
-   
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.logo span{
-    font-size:30px ;
-    font-weight:500;
+.logo img {
+  width: 50px;
 }
+
+.logo span {
+  font-size: 28px;
+  font-weight: 600;
+}
+
 .navmenu{
     display: flex;
     list-style: none;
