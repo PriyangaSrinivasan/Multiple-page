@@ -20,15 +20,11 @@
   </head>
   <body>
     <!-- Topbar -->
-
     <div class="topbar">
       <div class="contactinfo">
         <span><i class="fa-solid fa-phone"></i> (629) 555-0129</span>
         <span><i class="fa-solid fa-envelope"></i> info@example.com</span>
-        <span
-          ><i class="fa-solid fa-location-dot"></i> 6391 Elgin St. Celina,
-          1029</span
-        >
+        <span><i class="fa-solid fa-location-dot"></i> 6391 Elgin St. Celina, 1029</span>
       </div>
       <div class="media">
         <a href="#" class="links"><i class="fa-brands fa-facebook-f"></i></a>
@@ -39,7 +35,8 @@
     </div>
 
     <!-- Navbar -->
-    <div class="navbar d-flex justify-content-around m-1">
+    <!-- FIX 1: Renamed class "navbar" → "mainnavbar" to avoid Bootstrap conflict -->
+    <div class="mainnavbar d-flex justify-content-around m-1">
       <div class="logo"><img src="../Images/logo.png" /><span>Ascent</span></div>
       <div class="mainnav d-flex mt-3">
         <ul class="navmenu ps-3">
@@ -47,46 +44,49 @@
             <a href="#">Home</a>
             <ul class="dropdown-menu">
               <li><a href="../index.html">Home-1</a></li>
-          
             </ul>
           </li>
-          <li class="nav"><a href="About/about.html">About Us</a></li>
+          <!-- FIX 2: Was "About/about.html" missing "../", fixed to "../About/about.html" -->
+          <li class="nav"><a href="../About/about.html">About Us</a></li>
           <li class="nav dropdown">
             <a href="#">Services</a>
             <ul class="dropdown-menu">
-              <li><a href="/Service/service.html">Services</a></li>
-              <li><a href="/Service Details/servicedetails.html">Service Details</a></li>
+              <!-- FIX 3: Changed all absolute paths (/) to relative paths (../) -->
+              <!-- FIX 4: Folder is "ServiceDetails" (no space), not "Service Details" -->
+              <li><a href="../Service/service.html">Services</a></li>
+              <li><a href="../ServiceDetails/servicedetails.html">Service Details</a></li>
             </ul>
           </li>
           <li class="nav dropdown">
             <a href="#">Blog</a>
             <ul class="dropdown-menu">
-              <li><a href="/Blog/blog.html">Blog</a></li>
-              <li><a href="/BlogDetails/blogdetails.html">Blog Details</a></li>
+              <li><a href="../Blog/blog.html">Blog</a></li>
+              <li><a href="../BlogDetails/blogdetails.html">Blog Details</a></li>
             </ul>
           </li>
           <li class="nav dropdown">
             <a href="#">Page</a>
             <ul class="dropdown-menu">
-              <li><a href="/About/about.html">About</a></li>
-              <li><a href="/Service/service.html">Services</a></li>
-              <li><a href="/Service Details/servicedetails.html">Service Details</a></li>
-              <li><a href="/Portfolio/portfolio.html">Portfolio</a></li>
-              <li><a href="/Contactus/contact.html">Contact</a></li>
+              <li><a href="../About/about.html">About</a></li>
+              <li><a href="../Service/service.html">Services</a></li>
+              <li><a href="../ServiceDetails/servicedetails.html">Service Details</a></li>
+              <li><a href="../Portfolio/portfolio.html">Portfolio</a></li>
+              <li><a href="../Contactus/contact.html">Contact</a></li>
             </ul>
           </li>
-          <li class="nav"><a href="/Contactus/contact.html"> Contact Us</a></li>
+          <li class="nav"><a href="../Contactus/contact.html">Contact Us</a></li>
         </ul>
         <div class="buttons">
           <button class="search me-3 mt-3 ms-3">
             <i class="fa-solid fa-magnifying-glass"></i>
           </button>
           <button class="buttonani ps-4 pe-4 pt-3 pb-3 rounded-3 me-4">
-            Get A Quote <i class="fa-solid fa-arrow-right"></i
-            ><span class="toright"></span>
+            Get A Quote <i class="fa-solid fa-arrow-right"></i>
+            <span class="toright"></span>
           </button>
         </div>
-        <nav class="navbar">
+        <!-- FIX 5: Renamed inner nav class "navbar" → "mobilenav" to avoid Bootstrap conflict -->
+        <nav class="mobilenav">
           <div class="menu">
             <button
               class="navbar-toggler border-0"
@@ -103,7 +103,6 @@
               id="offcanvasNavbar"
             >
               <div class="offcanvas-header">
-                <!-- <h5 class="offcanvas-title">Ascent</h5> -->
                 <div class="logo">
                   <img src="../Images/logo.png" /><span>Ascent</span>
                 </div>
@@ -117,24 +116,22 @@
               <div class="offcanvas-body">
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                   <li class="nav-item border-bottom">
-                    <a class="nav-link active" aria-current="page" href="#"
-                      >Home</a
-                    >
+                    <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
                   </li>
                   <li class="nav-item border-bottom">
-                    <a class="nav-link" href="#">About Us</a>
+                    <a class="nav-link" href="../About/about.html">About Us</a>
                   </li>
                   <li class="nav-item border-bottom">
-                    <a class="nav-link" href="#">Services</a>
+                    <a class="nav-link" href="../Service/service.html">Services</a>
                   </li>
                   <li class="nav-item border-bottom">
-                    <a class="nav-link" href="#">Blog</a>
+                    <a class="nav-link" href="../Blog/blog.html">Blog</a>
                   </li>
                   <li class="nav-item border-bottom">
-                    <a class="nav-link" href="#">page</a>
+                    <a class="nav-link" href="#">Page</a>
                   </li>
                   <li class="nav-item border-bottom">
-                    <a class="nav-link" href="#">Contact Us</a>
+                    <a class="nav-link" href="../Contactus/contact.html">Contact Us</a>
                   </li>
                   <div class="sidebar">
                     <div class="contactsinfo">
@@ -145,26 +142,10 @@
                       <button class="p-3 rounded-3">Get A Quote</button>
                     </div>
                     <div class="medias mt-3 h5">
-                      <a
-                        href="#"
-                        class="links text-dark ps-3 pe-3 me-3 rounded-1"
-                        ><i class="fa-brands fa-facebook-f"></i
-                      ></a>
-                      <a
-                        href="#"
-                        class="links text-dark ps-3 pe-3 me-3 rounded-1"
-                        ><i class="fa-brands fa-x-twitter"></i
-                      ></a>
-                      <a
-                        href="#"
-                        class="links text-dark ps-3 pe-3 me-3 rounded-1"
-                        ><i class="fa-brands fa-linkedin"></i
-                      ></a>
-                      <a
-                        href="#"
-                        class="links text-dark ps-3 pe-3 me-3 rounded-1"
-                        ><i class="fa-brands fa-pinterest-p"></i
-                      ></a>
+                      <a href="#" class="links text-dark ps-3 pe-3 me-3 rounded-1"><i class="fa-brands fa-facebook-f"></i></a>
+                      <a href="#" class="links text-dark ps-3 pe-3 me-3 rounded-1"><i class="fa-brands fa-x-twitter"></i></a>
+                      <a href="#" class="links text-dark ps-3 pe-3 me-3 rounded-1"><i class="fa-brands fa-linkedin"></i></a>
+                      <a href="#" class="links text-dark ps-3 pe-3 me-3 rounded-1"><i class="fa-brands fa-pinterest-p"></i></a>
                     </div>
                   </div>
                 </ul>
@@ -174,13 +155,15 @@
         </nav>
       </div>
     </div>
+
     <!-- First Page -->
     <div class="firstpge">
       <div class="container">
         <div class="abouts pt-5 pb-5">
           <div class="aboutus">
             <h1>Services</h1>
-            <h3>Home &nbsp;&nbsp;&nbsp;<span>About Us</span></h3>
+            <!-- FIX 6: Breadcrumb wrongly said "About Us" — this is the Services page -->
+            <h3>Home &nbsp;&nbsp;&nbsp;<span>Services</span></h3>
           </div>
           <div class="breedimg">
             <img class="catbread" src="../Images/bread-cat.png" alt="" />
@@ -190,14 +173,14 @@
         </div>
       </div>
     </div>
-    <!-- 2ndpage -->
+
+    <!-- 2nd page -->
     <div class="forth mt-5 p-5">
       <h6>Educational Programs</h6>
-      <h3>
-        Strong Foundation for Success For <span>Nurturing Curiosityl</span>
-      </h3>
+      <!-- FIX 7: Typo "Curiosityl" → "Curiosity" -->
+      <h3>Strong Foundation for Success For <span>Nurturing Curiosity</span></h3>
       <div class="pencil">
-        <img src="../Images/pencil-rocket.png" height="" />
+        <img src="../Images/pencil-rocket.png" />
       </div>
     </div>
     <div class="container">
@@ -209,9 +192,10 @@
               <i class="fa-solid fa-car-side"></i>
             </div>
             <h4>Online Class</h4>
+            <!-- FIX 8: Stray "]" at end of lorem ipsum text in box1 -->
             <p class="text-muted mt-3 mb-3">
               Lorem ipsum dolor sit amet consectetur adipiscing elit platea the
-              ,osr of a proin mollis pretium facilisi in]
+              ,osr of a proin mollis pretium facilisi in
             </p>
             <p class="readmore">
               Read More<i class="fa-solid fa-arrow-right"></i>
@@ -268,7 +252,8 @@
         </div>
       </div>
     </div>
-    <!-- 3rdpage -->
+
+    <!-- 3rd page -->
     <div class="staypge mt-4 p-4">
       <div class="container">
         <div class="staytuned">
@@ -290,64 +275,63 @@
         </div>
       </div>
     </div>
-    <!-- 4rd page -->
+
+    <!-- Footer page -->
     <div class="footers w-100">
       <div class="container">
         <div class="row d-flex justify-content-between pt-5">
           <div class="col">
             <div class="logo"><img src="../Images/logo.png" /><span>Ascent</span></div>
-            <p>
-              Yes, there are many notable ma corporate the a od businesses
-              Informati worldwide
-            </p>
+            <p>Yes, there are many notable ma corporate the a od businesses Informati worldwide</p>
             <div class="pros d-flex mt-4">
-              <a href="#" class="pro1 me-3"
-                ><i class="fa-brands fa-facebook-f"></i
-              ></a>
-              <a href="#" class="pro2 me-3"
-                ><i class="fa-brands fa-x-twitter"></i
-              ></a>
-              <a href="#" class="pro3 me-3"
-                ><i class="fa-brands fa-linkedin"></i
-              ></a>
-              <a href="#" class="pro4"
-                ><i class="fa-brands fa-pinterest-p"></i
-              ></a>
+              <a href="#" class="pro1 me-3"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" class="pro2 me-3"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="#" class="pro3 me-3"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="#" class="pro4"><i class="fa-brands fa-pinterest-p"></i></a>
             </div>
           </div>
           <div class="list3 col">
             <h5>Pages</h5>
-            <li>About Us</li>
-            <li>Latest Service</li>
-            <li>Latest Blog And News</li>
-            <li>FAQ</li>
-            <li>Our Creative Team Members</li>
+            <!-- FIX 9: Wrapped bare <li> tags in <ul> — invalid HTML without wrapper -->
+            <ul>
+              <li>About Us</li>
+              <li>Latest Service</li>
+              <li>Latest Blog And News</li>
+              <li>FAQ</li>
+              <li>Our Creative Team Members</li>
+            </ul>
           </div>
           <div class="list4 col">
             <h4>Contact</h4>
-            <li>1179 KFC Road, Lisbon, Portugal</li>
-            <li>Sakib23@gmail.com</li>
-            <li>012547892354</li>
+            <!-- FIX 9 (cont): Wrapped bare <li> tags in <ul> -->
+            <ul>
+              <li>1179 KFC Road, Lisbon, Portugal</li>
+              <li>Sakib23@gmail.com</li>
+              <li>012547892354</li>
+            </ul>
           </div>
           <div class="newsletter col">
             <h4>Our Newsletter</h4>
             <p>Subscribe our newsletter to get our latest update</p>
-            <input type="text" placeholder="Enter Your Email" />
+            <!-- FIX 10: Changed type="text" to type="email" for email field -->
+            <input type="email" placeholder="Enter Your Email" />
           </div>
         </div>
       </div>
-      <!-- Footer -->
+      <!-- Footer bottom -->
       <div class="footer d-flex justify-content-between mt-5">
         <div class="col ms-4">
           <p>© Yoursitename 2024 | All Rights Reserved</p>
         </div>
-        <div class="list5 d-flex me-4">
-          <li>Trams & Condition</li>
+        <!-- FIX 9 (cont): Wrapped bare <li> tags in <ul> -->
+        <ul class="list5 d-flex me-4">
+          <li>Terms &amp; Condition</li>
           <li>Privacy Policy</li>
           <li>Contact Us</li>
-        </div>
+        </ul>
       </div>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

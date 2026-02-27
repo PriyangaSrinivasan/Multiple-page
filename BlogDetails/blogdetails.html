@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Ascent-Childcare & Kids School</title>
+    <title>Ascent-Childcare & Kids School</title>
     <link rel="icon" href="../Images/logo.png" />
     <link rel="stylesheet" href="blogdetails.css">
-     <link
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
       integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
@@ -20,15 +20,11 @@
 </head>
 <body>
     <!-- Topbar -->
-
     <div class="topbar">
       <div class="contactinfo">
         <span><i class="fa-solid fa-phone"></i> (629) 555-0129</span>
         <span><i class="fa-solid fa-envelope"></i> info@example.com</span>
-        <span
-          ><i class="fa-solid fa-location-dot"></i> 6391 Elgin St. Celina,
-          1029</span
-        >
+        <span><i class="fa-solid fa-location-dot"></i> 6391 Elgin St. Celina, 1029</span>
       </div>
       <div class="media">
         <a href="#" class="links"><i class="fa-brands fa-facebook-f"></i></a>
@@ -39,7 +35,8 @@
     </div>
 
     <!-- Navbar -->
-    <div class="navbar d-flex justify-content-around m-1">
+    <!-- FIX: Renamed class from "navbar" to "mainnavbar" to avoid Bootstrap conflict -->
+    <div class="mainnavbar d-flex justify-content-around m-1">
       <div class="logo"><img src="../Images/logo.png" /><span>Ascent</span></div>
       <div class="mainnav d-flex mt-3">
         <ul class="navmenu ps-3">
@@ -49,43 +46,49 @@
               <li><a href="../index.html">Home-1</a></li>
             </ul>
           </li>
-          <li class="nav"><a href="#">About Us</a></li>
+          <!-- FIX: Added correct relative path for About Us -->
+          <li class="nav"><a href="../About/about.html">About Us</a></li>
           <li class="nav dropdown">
             <a href="#">Services</a>
             <ul class="dropdown-menu">
-              <li><a href="/Service/service.html">Services</a></li>
-              <li><a href="/Service Details/servicedetails.html">Service Details</a></li>
+              <!-- FIX: Changed absolute paths to relative paths -->
+              <li><a href="../Service/service.html">Services</a></li>
+              <li><a href="../ServiceDetails/servicedetails.html">Service Details</a></li>
             </ul>
           </li>
           <li class="nav dropdown">
             <a href="#">Blog</a>
             <ul class="dropdown-menu">
-              <li><a href="/Blog/blog.html">Blog</a></li>
-              <li><a href="/BlogDetails/blogdetails.html">Blog Details</a></li>
+              <!-- FIX: Changed absolute paths to relative paths -->
+              <li><a href="../Blog/blog.html">Blog</a></li>
+              <li><a href="../BlogDetails/blogdetails.html">Blog Details</a></li>
             </ul>
           </li>
-           <li class="nav dropdown">
+          <li class="nav dropdown">
             <a href="#">Page</a>
             <ul class="dropdown-menu">
-              <li><a href="/About/about.html">About</a></li>
-              <li><a href="/Service/service.html">Services</a></li>
-              <li><a href="/Service Details/servicedetails.html">Service Details</a></li>
-              <li><a href="/Portfolio/portfolio.html">Portfolio</a></li>
-              <li><a href="/Contactus/contact.html">Contact</a></li>
+              <!-- FIX: Changed absolute paths to relative paths -->
+              <li><a href="../About/about.html">About</a></li>
+              <li><a href="../Service/service.html">Services</a></li>
+              <li><a href="../ServiceDetails/servicedetails.html">Service Details</a></li>
+              <li><a href="../Portfolio/portfolio.html">Portfolio</a></li>
+              <li><a href="../Contactus/contact.html">Contact</a></li>
             </ul>
           </li>
-          <li class="nav"><a href="/Contactus/contact.html"> Contact Us</a></li>
+          <!-- FIX: Changed absolute path to relative path -->
+          <li class="nav"><a href="../Contactus/contact.html">Contact Us</a></li>
         </ul>
         <div class="buttons">
           <button class="search me-3 mt-3 ms-3">
             <i class="fa-solid fa-magnifying-glass"></i>
           </button>
           <button class="buttonani ps-4 pe-4 pt-3 pb-3 rounded-3 me-4">
-            Get A Quote <i class="fa-solid fa-arrow-right"></i
-            ><span class="toright"></span>
+            Get A Quote <i class="fa-solid fa-arrow-right"></i>
+            <span class="toright"></span>
           </button>
         </div>
-        <nav class="navbar">
+        <!-- FIX: Renamed class from "navbar" to "mobilenav" to avoid Bootstrap conflict -->
+        <nav class="mobilenav">
           <div class="menu">
             <button
               class="navbar-toggler border-0"
@@ -102,7 +105,6 @@
               id="offcanvasNavbar"
             >
               <div class="offcanvas-header">
-                <!-- <h5 class="offcanvas-title">Ascent</h5> -->
                 <div class="logo">
                   <img src="../Images/logo.png" /><span>Ascent</span>
                 </div>
@@ -116,24 +118,22 @@
               <div class="offcanvas-body">
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                   <li class="nav-item border-bottom">
-                    <a class="nav-link active" aria-current="page" href="#"
-                      >Home</a
-                    >
+                    <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
                   </li>
                   <li class="nav-item border-bottom">
-                    <a class="nav-link" href="#">About Us</a>
+                    <a class="nav-link" href="../About/about.html">About Us</a>
                   </li>
                   <li class="nav-item border-bottom">
-                    <a class="nav-link" href="#">Services</a>
+                    <a class="nav-link" href="../Service/service.html">Services</a>
                   </li>
                   <li class="nav-item border-bottom">
-                    <a class="nav-link" href="#">Blog</a>
+                    <a class="nav-link" href="../Blog/blog.html">Blog</a>
                   </li>
                   <li class="nav-item border-bottom">
-                    <a class="nav-link" href="#">page</a>
+                    <a class="nav-link" href="#">Page</a>
                   </li>
                   <li class="nav-item border-bottom">
-                    <a class="nav-link" href="#">Contact Us</a>
+                    <a class="nav-link" href="../Contactus/contact.html">Contact Us</a>
                   </li>
                   <div class="sidebar">
                     <div class="contactsinfo">
@@ -144,26 +144,10 @@
                       <button class="p-3 rounded-3">Get A Quote</button>
                     </div>
                     <div class="medias mt-3 h5">
-                      <a
-                        href="#"
-                        class="links text-dark ps-3 pe-3 me-3 rounded-1"
-                        ><i class="fa-brands fa-facebook-f"></i
-                      ></a>
-                      <a
-                        href="#"
-                        class="links text-dark ps-3 pe-3 me-3 rounded-1"
-                        ><i class="fa-brands fa-x-twitter"></i
-                      ></a>
-                      <a
-                        href="#"
-                        class="links text-dark ps-3 pe-3 me-3 rounded-1"
-                        ><i class="fa-brands fa-linkedin"></i
-                      ></a>
-                      <a
-                        href="#"
-                        class="links text-dark ps-3 pe-3 me-3 rounded-1"
-                        ><i class="fa-brands fa-pinterest-p"></i
-                      ></a>
+                      <a href="#" class="links text-dark ps-3 pe-3 me-3 rounded-1"><i class="fa-brands fa-facebook-f"></i></a>
+                      <a href="#" class="links text-dark ps-3 pe-3 me-3 rounded-1"><i class="fa-brands fa-x-twitter"></i></a>
+                      <a href="#" class="links text-dark ps-3 pe-3 me-3 rounded-1"><i class="fa-brands fa-linkedin"></i></a>
+                      <a href="#" class="links text-dark ps-3 pe-3 me-3 rounded-1"><i class="fa-brands fa-pinterest-p"></i></a>
                     </div>
                   </div>
                 </ul>
@@ -173,6 +157,7 @@
         </nav>
       </div>
     </div>
+
     <!-- First Page -->
     <div class="firstpge">
       <div class="container">
@@ -189,187 +174,210 @@
         </div>
       </div>
     </div>
+
     <!-- 2nd page -->
-<div class="mt-5 ms-5 p-5">
-    <div class="contentimg">
+    <div class="mt-5 ms-5 p-5">
+      <div class="contentimg">
         <div class="blog1">
-    <div class="blogs d-flex">
-    <div class="card mb-3 col-lg-12 col-md-12 rounded-3">
-  <img src="../Images/blog-3-2.png" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Unlock your potential with education ower yourself the na through learning.</h5>
-     <button class="ps-4 pe-4 pt-2 pb-2 rounded-3 border mt-4">Read More</button>
-    <p class="card-text m-4"><small class="text-body-secondary"><span>January 19, 2024</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>By admin</span>&nbsp;&nbsp;&nbsp;&nbsp; <span>Comments (05)</span></small></p>
-  </div>
-</div>   
-</div>
-    <div class="blogs1">
-    <div class="card mb-3 col-lg-12 col-md-12 rounded-3">
-    <img src="../Images/blog-3-3.png" class="card-img-top" alt="...">
-    <div class="card-body">
-        <h5 class="card-title">It Plays A Vital Role In Shaping The Future Generation And Promoting Personal And Professional Growth</h5>
-        <button class="ps-4 pe-4 pt-2 pb-2 rounded-3 border mt-4">Read More</button>
-        <p class="card-text mt-4"><small class="text-body-secondary"><span>January 19, 2024</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>By admin</span>&nbsp;&nbsp;&nbsp;&nbsp; <span>Comments (05)</span></small></p>
-    </div>
+          <div class="blogs d-flex">
+            <div class="card mb-3 col-lg-12 col-md-12 rounded-3">
+              <img src="../Images/blog-3-2.png" class="card-img-top" alt="Blog image 1">
+              <div class="card-body">
+                <h5 class="card-title">Unlock your potential with education ower yourself the na through learning.</h5>
+                <button class="ps-4 pe-4 pt-2 pb-2 rounded-3 border mt-4">Read More</button>
+                <p class="card-text m-4">
+                  <small class="text-body-secondary">
+                    <span>January 19, 2024</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span>By admin</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span>Comments (05)</span>
+                  </small>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="blogs1">
+            <div class="card mb-3 col-lg-12 col-md-12 rounded-3">
+              <img src="../Images/blog-3-3.png" class="card-img-top" alt="Blog image 2">
+              <div class="card-body">
+                <h5 class="card-title">It Plays A Vital Role In Shaping The Future Generation And Promoting Personal And Professional Growth</h5>
+                <button class="ps-4 pe-4 pt-2 pb-2 rounded-3 border mt-4">Read More</button>
+                <p class="card-text mt-4">
+                  <small class="text-body-secondary">
+                    <span>January 19, 2024</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span>By admin</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span>Comments (05)</span>
+                  </small>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="blogs1">
+            <div class="card mb-3 col-lg-12 col-md-12 rounded-3">
+              <img src="../Images/blog-3-4.png" class="card-img-top" alt="Blog image 3">
+              <div class="card-body">
+                <h5 class="card-title">Invest In Education, Invest In Yourself Education The Na Through Learning.</h5>
+                <button class="ps-4 pe-4 pt-2 pb-2 rounded-3 border mt-4">Read More</button>
+                <p class="card-text mt-4">
+                  <small class="text-body-secondary">
+                    <span>January 19, 2024</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span>By admin</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span>Comments (05)</span>
+                  </small>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="userblog ms-4">
+          <div class="usersimg col-lg-9 col-md-6 col-sm-10 p-5">
+            <img src="../Images/user.png" alt="User">
+            <h5 class="mt-3">Nafiz Bhuiyan</h5>
+            <p class="w-75">It is a long established fact that a reader will be distracted by the read content of a page when looking at its layout</p>
+            <div class="media">
+              <a href="#" class="links ps-3 pt-1 pe-3 pb-1 text-black rounded-3"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" class="links ps-3 pt-1 pe-3 pb-1 text-black rounded-3"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="#" class="links ps-3 pt-1 pe-3 pb-1 text-black rounded-3"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="#" class="links ps-3 pt-1 pe-3 pb-1 text-black rounded-3"><i class="fa-brands fa-pinterest-p"></i></a>
+            </div>
+          </div>
+
+          <div class="searcin col-lg-9 col-md-6 col-sm-10 mt-4 p-4">
+            <h2>Search_</h2>
+            <input type="text" placeholder="Search...">
+          </div>
+
+          <div class="category col-lg-9 col-md-6 col-sm-10 mt-4">
+            <h2>Category_</h2>
+            <!-- FIX: Replaced <input type="text"> with <span> — inputs are for user typing, not display labels -->
+            <div class="subcategory">
+              <span class="category-label">EduTech Solutions</span>
+              <p class="mt-2">01</p>
+            </div>
+            <div class="subcategory mt-3">
+              <span class="category-label">SmartAcademy</span>
+              <p class="mt-2">07</p>
+            </div>
+            <div class="subcategory mt-3">
+              <span class="category-label">KnowledgeHub</span>
+              <p class="mt-2">02</p>
+            </div>
+            <div class="subcategory mt-3">
+              <span class="category-label">Specialist</span>
+              <p class="mt-2">04</p>
+            </div>
+            <div class="subcategory mt-3">
+              <span class="category-label">Education is the door</span>
+              <p class="mt-2">03</p>
+            </div>
+          </div>
+
+          <div class="recentpost col-lg-9 col-md-6 col-sm-10 mt-3">
+            <h4>Recent post_</h4>
+            <div class="border ps-3 pt-2">
+              <p><span>Category</span>&nbsp;&nbsp;&nbsp;<span>Comments 0</span></p>
+              <h4>Expand your horizons with Most Of education</h4>
+            </div>
+            <div class="border ps-3 pt-2 mt-2">
+              <p><span>Category</span>&nbsp;&nbsp;&nbsp;<span>Comments 0</span></p>
+              <h4>Invest in education invest in yourself Best</h4>
+            </div>
+            <div class="border ps-3 pt-2 mt-2">
+              <p><span>Category</span>&nbsp;&nbsp;&nbsp;<span>Comments 0</span></p>
+              <h4>Empower yourself through an learning</h4>
+            </div>
+          </div>
+
+          <div class="tags col-lg-9 col-md-6 col-sm-10 mt-3">
+            <h4>Tags_</h4>
+            <!-- FIX: Replaced <input type="text"> with <span> for non-editable tag labels -->
+            <span class="tag-label">LearnWell</span>
+            <span class="tag-label">Edu Pro</span>
+            <span class="tag-label">Study Boost</span>
+            <span class="tag-label">Academy</span>
+            <span class="tag-label">LearnEase</span>
+            <span class="tag-label">BrainWave</span>
+          </div>
+        </div>
+      </div>
     </div>
 
-    </div>
-    <div class="blogs1">
-    <div class="card mb-3 col-lg-12 col-md-12 rounded-3">
-    <img src="../Images/blog-3-4.png" class="card-img-top" alt="...">
-    <div class="card-body">
-        <h5 class="card-title">Invest In Education, Invest In Yourself Education The Na Through Learning.</h5>
-        <button class="ps-4 pe-4 pt-2 pb-2 rounded-3 border mt-4">Read More</button>
-        <p class="card-text mt-4"><small class="text-body-secondary"><span>January 19, 2024</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>By admin</span>&nbsp;&nbsp;&nbsp;&nbsp; <span>Comments (05)</span></small></p>
-    </div>
-    </div>
-</div>
-</div>
-<div class="userblog ms-4">
- <div class="usersimg col-lg-9 col-md-6 col-sm-10  p-5">
-    <img src="../Images/user.png" alt="">
-    <h5 class="mt-3">Nafiz Bhuiyan</h5>
-    <p class="w-75">It is a long established fact that a reader will be distracted by the read content of a page when looking at its layout</p>
-      <div class="media">
-        <a href="#" class="links ps-3 pt-1 pe-3 pb-1 text-black rounded-3"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="#" class="links ps-3 pt-1 pe-3 pb-1 text-black rounded-3"><i class="fa-brands fa-x-twitter"></i></a>
-        <a href="#" class="links ps-3 pt-1 pe-3 pb-1 text-black rounded-3"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="#" class="links ps-3 pt-1 pe-3 pb-1 text-black rounded-3"><i class="fa-brands fa-pinterest-p"></i></a>
-      </div>
-      </div>
-    <div class="searcin col-lg-9 col-md-6 col-sm-10 mt-4 p-4">
-        <h2>Search_</h2>
-        <input type="text" placeholder="Search...">
-    </div>
-    <div class="category col-lg-9 col-md-6 col-sm-10 mt-4">
-        <h2>Category_</h2>
-        <div class="subcategory">
-          <input type="text" placeholder="EduTech Solutions">
-          <p class="mt-2">01</p>
-        </div>
-         <div class="subcategory mt-3">
-          <input type="text" placeholder="SmartAcademy">
-          <p class="mt-2">07</p>
-        </div>
-         <div class="subcategory mt-3">
-          <input type="text" placeholder="KnowledgeHub">
-          <p class="mt-2">02</p>
-        </div>
-         <div class="subcategory mt-3">
-          <input type="text" placeholder="Specialist">
-          <p class="mt-2">04</p>
-        </div>
-         <div class="subcategory mt-3">
-          <input type="text" placeholder="Education is the door">
-          <p class="mt-2">03</p>
-        </div>
-    </div>
-    <div class="recentpost col-lg-9 col-md-6 col-sm-10 mt-3">
-      <h4>Recent post_</h4>
-       <div class="border ps-3 pt-2">
-          <p><span>Category</span>&nbsp;&nbsp;&nbsp;<span>Comments 0</span></p>
-          <h4>Expand your horizons with Most Of education</h4>
-        </div>
-        <div class="border  ps-3 pt-2 mt-2">
-          <p><span>Category</span>&nbsp;&nbsp;&nbsp;<span>Comments 0</span></p>
-          <h4>Invest in education invest in yourself Best</h4>
-        </div>
-        <div class="border  ps-3 pt-2 mt-2">
-          <p><span>Category</span>&nbsp;&nbsp;&nbsp;<span>Comments 0</span></p>
-          <h4>Empower yourself through an learning</h4>
-        </div>
-    </div>
-    <div class="tags col-lg-9 col-md-6 col-sm-10 mt-3">
-       <h4>Tags_</h4>
-       
-        <input type="text" placeholder="LearnWell">
-          <input type="text" placeholder="Edu Pro ">
-          <input type="text" placeholder="Study Boost">
-          <input type="text" placeholder="Academy">
-          <input type="text" placeholder="LearnEase">
-          <input type="text" placeholder="BrainWave">
-        </div>
-    
-</div>
-</div>
-</div>
-<!-- lastpage -->
-       <div class="staypge mt-4 p-4"> 
-        <div class="container">
-          <div class="staytuned">
-          <div class="staywith col-6 ">
+    <!-- Stay page -->
+    <div class="staypge mt-4 p-4">
+      <div class="container">
+        <div class="staytuned">
+          <div class="staywith col-6">
             <h5>Stay With Us</h5>
             <h3>The path to success starts with education</h3>
             <p class="text-muted">Lorem ipsum dolor sit amet consectetur. Amet lectus mi ultricies dictum facilisis sem. Imperdiet massa turpis sit proin metus volutpat.</p>
             <button class="readmores ps-4 pe-4 pt-3 pb-3 mt-3 rounded-5">Read More</button>
           </div>
           <div class="stay1">
-            <img src="../Images/stay-thumb.png" alt="">
+            <img src="../Images/stay-thumb.png" alt="Stay with us">
           </div>
         </div>
-     </div>
-     </div>
-<!-- footerpage -->
-  <div class="footers w-100 ">
+      </div>
+    </div>
+
+    <!-- Footer page -->
+    <div class="footers w-100">
       <div class="container">
-      <div class="row d-flex justify-content-between pt-5">
-        <div class="col">
-          <div class="logo"><img src="../Images/logo.png" /><span>Ascent</span></div>
-          <p>
-            Yes, there are many notable ma corporate the a od businesses
-            Informati worldwide
-          </p>
-          <div class="pros d-flex mt-4">
-            <a href="#" class="pro1 me-3"
-              ><i class="fa-brands fa-facebook-f"></i
-            ></a>
-            <a href="#" class="pro2 me-3"
-              ><i class="fa-brands fa-x-twitter"></i
-            ></a>
-            <a href="#" class="pro3 me-3"
-              ><i class="fa-brands fa-linkedin"></i
-            ></a>
-            <a href="#" class="pro4"
-              ><i class="fa-brands fa-pinterest-p"></i
-            ></a>
+        <div class="row d-flex justify-content-between pt-5">
+          <div class="col">
+            <div class="logo"><img src="../Images/logo.png" /><span>Ascent</span></div>
+            <p>Yes, there are many notable ma corporate the a od businesses Informati worldwide</p>
+            <div class="pros d-flex mt-4">
+              <a href="#" class="pro1 me-3"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" class="pro2 me-3"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="#" class="pro3 me-3"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="#" class="pro4"><i class="fa-brands fa-pinterest-p"></i></a>
+            </div>
+          </div>
+          <div class="list3 col">
+            <h5>Pages</h5>
+            <!-- FIX: Wrapped <li> in <ul> — bare <li> without <ul> is invalid HTML -->
+            <ul>
+              <li>About Us</li>
+              <li>Latest Service</li>
+              <li>Latest Blog And News</li>
+              <li>FAQ</li>
+              <li>Our Creative Team Members</li>
+            </ul>
+          </div>
+          <div class="list4 col">
+            <h4>Contact</h4>
+            <!-- FIX: Wrapped <li> in <ul> -->
+            <ul>
+              <li>1179 KFC Road, Lisbon, Portugal</li>
+              <li>Sakib23@gmail.com</li>
+              <li>012547892354</li>
+            </ul>
+          </div>
+          <div class="newsletter col">
+            <h4>Our Newsletter</h4>
+            <p>Subscribe our newsletter to get our latest update</p>
+            <!-- FIX: Changed type="text" to type="email" for email field -->
+            <input type="email" placeholder="Enter Your Email">
           </div>
         </div>
-        <div class="list3 col">
-          <h5>Pages</h5>
-          <li>About Us</li>
-          <li>Latest Service</li>
-          <li>Latest Blog And News</li>
-          <li>FAQ</li>
-          <li>Our Creative Team Members</li>
+      </div>
+
+      <!-- Footer bottom -->
+      <div class="footer d-flex justify-content-between mt-5">
+        <div class="col ms-4">
+          <p>© Yoursitename 2024 | All Rights Reserved</p>
         </div>
-        <div class="list4 col">
-          <h4>Contact</h4>
-          <li>1179 KFC Road, Lisbon, Portugal</li>
-          <li>Sakib23@gmail.com</li>
-          <li>012547892354</li>
-        </div>
-        <div class="newsletter col">
-          <h4>Our Newsletter</h4>
-          <p>Subscribe our newsletter to get our latest update</p>
-          <input  type="text" placeholder="Enter Your Email">
-        </div>
+        <!-- FIX: Wrapped <li> in <ul> -->
+        <ul class="list5 d-flex me-4">
+          <li>Terms &amp; Condition</li>
+          <li>Privacy Policy</li>
+          <li>Contact Us</li>
+        </ul>
       </div>
     </div>
-    <!-- Footer -->
-    <div class="footer d-flex justify-content-between mt-5">
-      <div class="col ms-4">
-        <p>© Yoursitename 2024 | All Rights Reserved</p>
-      </div>
-      <div class="list5 d-flex me-4">
-        <li>Trams & Condition</li>
-        <li>Privacy Policy</li>
-        <li>Contact Us</li>
-      </div>
-    </div>
-    </div>
 
-
-
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

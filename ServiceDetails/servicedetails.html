@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ascent-Childcare & Kids School</title>
     <link rel="icon" href="../Images/logo.png" />
-    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="servicedetails.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -17,8 +17,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
     />
-</head>
-<body>
+  </head>
+  <body>
     <!-- Topbar -->
     <div class="topbar">
       <div class="contactinfo">
@@ -46,12 +46,12 @@
               <li><a href="../index.html">Home-1</a></li>
             </ul>
           </li>
-          <!-- FIX 2: Added relative path for About Us -->
+          <!-- FIX 2: Added correct relative path for About Us -->
           <li class="nav"><a href="../About/about.html">About Us</a></li>
           <li class="nav dropdown">
             <a href="#">Services</a>
             <ul class="dropdown-menu">
-              <!-- FIX 3: All absolute paths changed to relative paths -->
+              <!-- FIX 3: Changed absolute paths to relative paths -->
               <li><a href="../Service/service.html">Services</a></li>
               <li><a href="../ServiceDetails/servicedetails.html">Service Details</a></li>
             </ul>
@@ -68,6 +68,7 @@
             <ul class="dropdown-menu">
               <li><a href="../About/about.html">About</a></li>
               <li><a href="../Service/service.html">Services</a></li>
+              <!-- FIX 4: "Service Details" had a space — correct folder is "ServiceDetails" -->
               <li><a href="../ServiceDetails/servicedetails.html">Service Details</a></li>
               <li><a href="../Portfolio/portfolio.html">Portfolio</a></li>
               <li><a href="../Contactus/contact.html">Contact</a></li>
@@ -75,7 +76,6 @@
           </li>
           <li class="nav"><a href="../Contactus/contact.html">Contact Us</a></li>
         </ul>
-        <!-- FIX 4: Removed the stray orphan </li> and </ul> tags that were here -->
         <div class="buttons">
           <button class="search me-3 mt-3 ms-3">
             <i class="fa-solid fa-magnifying-glass"></i>
@@ -161,8 +161,8 @@
       <div class="container">
         <div class="abouts pt-5 pb-5">
           <div class="aboutus">
-            <h1>Contact Us</h1>
-            <h3>Home &nbsp;&nbsp;>&nbsp;&nbsp;<span>ContactUs</span></h3>
+            <h1>Service Details</h1>
+            <h3>Home &nbsp;&nbsp;&nbsp;<span>Service Details</span></h3>
           </div>
           <div class="breedimg">
             <img class="catbread" src="../Images/bread-cat.png" alt="" />
@@ -175,93 +175,47 @@
 
     <!-- 2nd page -->
     <div class="container mt-5">
-      <div class="contacts col-lg-12">
-        <div class="location col-lg-3 col-sm-8 mt-3">
-          <div class="icons">
-            <i class="fa-solid fa-location-dot"></i>
-          </div>
-          <h5 class="mt-3">Location</h5>
-          <p class="mt-3">120os road no12. Mirpur, Bangladesh</p>
+      <div class="sd1">
+        <img src="../Images/service-details-1.png" alt="Service Details" />
+        <h2 class="heads4 mt-4">Discover the power of education Knowledge is the key</h2>
+        <p class="paras mt-4">
+          There are many variations passages a This category focariatio of deign
+          Redefining the an the concept of living This category focuses on the
+          design and construction of bu a arrangement furniture and decorative
+          elements within them focariatio of deign There are many variations
+          passages a This category focariatio of deign Redefining the an the
+          concept of living This category focuses on the design and construction
+          of bu a arrangement furniture
+        </p>
+      </div>
+      <div class="parass mt-4">
+        <div class="p1">
+          <p>Education is the key to success. It empowers individuals with knowledge</p>
+          <p>Education opens doors to opportunities, fosters critical thinking, and promote</p>
         </div>
-        <div class="mails col-lg-3 col-sm-8 mt-3">
-          <div class="icons">
-            <i class="fa-solid fa-envelope"></i>
-          </div>
-          <h5 class="mt-3">Mail</h5>
-          <!-- FIX 6: Fixed broken email display — was "fahad 1234@gmail.com" (space in email) -->
-          <p class="mt-3">nafiz123@gmail.com &nbsp;|&nbsp; fahad1234@gmail.com</p>
-        </div>
-        <div class="calls col-lg-3 col-sm-8 mt-3">
-          <div class="icons">
-            <i class="fa-solid fa-phone"></i>
-          </div>
-          <h5 class="mt-3">Contact</h5>
-          <p class="mt-3">013254974147, 01258369741</p>
+        <div class="p2">
+          <p>Education is the key to success. It empowers individuals with knowledge</p>
+          <p>Education opens doors to opportunities, fosters critical thinking, and promote</p>
         </div>
       </div>
-    </div>
-
-    <!-- 3rd page - Map -->
-    <div>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15664.630942467968!2d76.89547264013697!3d11.02678968787533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba85f3a13cd79f1%3A0x618c4b40b43038e6!2sVadavalli%2C%20Coimbatore%2C%20Tamil%20Nadu%20641041!5e0!3m2!1sen!2sin!4v1748762719165!5m2!1sen!2sin"
-        width="100%"
-        height="450"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        title="Location Map">
-      </iframe>
-    </div>
-
-    <!-- 4th page - Contact Form -->
-    <div class="container mt-5">
-      <div class="educontact">
-        <h5>Contact</h5>
-        <h3>Unlock your potential with education</h3>
+      <div class="paraimg mt-4">
+        <img src="../Images/service-details-2.png" alt="Service detail 2">
+        <img src="../Images/service-details-3.png" alt="Service detail 3">
+        <img src="../Images/service-details-4.png" alt="Service detail 4">
       </div>
-      <div class="wholecontact">
-        <div class="contactimg mt-5">
-          <div class="imgs1">
-            <img src="../Images/contact-1.png" alt="Contact image 1">
+      <div class="serviceall mt-4">
+        <h3>Service all details</h3>
+        <p>There are many variations passages a This category focariatio of deign Redefining the an the concept of living This category focuses on the design and construction of bu a arrangement furniture and decorative elements within them focariatio of deign</p>
+        <div class="groupdetails">
+          <div>
+            <p>It plays a vital role in shaping the future generation and promoting</p>
+            <p>Education encompasses formal learning in schools, colleges, and universities</p>
+            <p>Education opens doors to opportunities, fosters critical thinking, and promote</p>
+            <p>Man encompasses formal learning in schools, colleges, and universities</p>
           </div>
-          <div class="img2">
-            <img src="../Images/contact-2.png" alt="Contact image 2">
+          <div>
+            <img src="../Images/service-details-5.png" alt="Service detail 5">
           </div>
-          <div class="winner col-lg-5 col-md-4 col-sm-5 col-xs-4">
-            <div class="shield me-2">
-              <i class="fa-solid fa-shield"></i>
-            </div>
-            <div>
-              <h5>2k+</h5>
-              <p>Project Completed</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="sendmsg col-lg-6 mt-5">
-          <h2 class="ms-4">Send a message</h2>
-          <div class="detail">
-            <div class="subcategory col-lg-5 ps-2 pe-3 ms-4">
-              <input type="text" placeholder="Your Name">
-              <p class="mt-3"><i class="fa-solid fa-paper-plane"></i></p>
-            </div>
-            <!-- FIX 7: Changed type="text" to type="email" for email input -->
-            <div class="subcategory col-lg-5 ps-2 pe-3 ms-4">
-              <input type="email" placeholder="Your Email">
-              <p class="mt-3"><i class="fa-solid fa-phone"></i></p>
-            </div>
-          </div>
-          <div class="subcategory col-lg-11 ps-2 pe-3 ms-4 mt-4">
-            <input type="text" placeholder="Your Address">
-            <p class="mt-3"><i class="fa-solid fa-location-dot"></i></p>
-          </div>
-          <!-- FIX 8: Changed <input type="textarea"> to a real <textarea> element -->
-          <div class="subcategory col-lg-11 ps-2 pe-3 ms-4 mt-4 pb-5">
-            <textarea rows="4" placeholder="Write Message Here" style="width:100%;"></textarea>
-          </div>
-          <button class="w-75 pt-2 pb-2 ps-2 pe-2 mt-4 rounded-5 col-lg-5 ms-5">Send Now</button>
         </div>
       </div>
     </div>
@@ -299,7 +253,7 @@
           </div>
           <div class="list3 col">
             <h5>Pages</h5>
-            <!-- FIX 9: Wrapped <li> in <ul> — bare <li> is invalid HTML -->
+            <!-- FIX 6: Wrapped bare <li> in <ul> — invalid HTML without wrapper -->
             <ul>
               <li>About Us</li>
               <li>Latest Service</li>
@@ -310,7 +264,7 @@
           </div>
           <div class="list4 col">
             <h4>Contact</h4>
-            <!-- FIX 9 (cont): Wrapped <li> in <ul> -->
+            <!-- FIX 6 (cont): Wrapped bare <li> in <ul> -->
             <ul>
               <li>1179 KFC Road, Lisbon, Portugal</li>
               <li>Sakib23@gmail.com</li>
@@ -320,18 +274,17 @@
           <div class="newsletter col">
             <h4>Our Newsletter</h4>
             <p>Subscribe our newsletter to get our latest update</p>
-            <!-- FIX 10: Changed type="text" to type="email" -->
+            <!-- FIX 7: Changed type="text" to type="email" -->
             <input type="email" placeholder="Enter Your Email">
           </div>
         </div>
       </div>
-
       <!-- Footer bottom -->
       <div class="footer d-flex justify-content-between mt-5">
         <div class="col ms-4">
           <p>© Yoursitename 2024 | All Rights Reserved</p>
         </div>
-        <!-- FIX 9 (cont): Wrapped <li> in <ul> -->
+        <!-- FIX 6 (cont): Wrapped bare <li> in <ul> -->
         <ul class="list5 d-flex me-4">
           <li>Terms &amp; Condition</li>
           <li>Privacy Policy</li>
@@ -341,5 +294,5 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+  </body>
 </html>
